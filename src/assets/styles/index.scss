@@ -1,0 +1,8 @@
+$bg-color: red;
+
+body {
+	background-color: $bg-color;
+	& h1 {
+		font-family: 'Rubik', sans-serif;
+	}
+}
