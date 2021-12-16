@@ -1,0 +1,9 @@
+.offer {
+	padding-top: 9.375rem;
+	&__text {
+		padding: 35px 0px 0px 35px;
+		width: 38.1%;
+		border-top: 9.5px solid $color-main;
+		border-left: 9.5px solid $color-main;
+	}
+}

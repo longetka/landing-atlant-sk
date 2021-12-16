@@ -1,0 +1,10 @@
+mixin card(img, title, subtitle, description)
+	.card
+		.card__header
+			.card__img
+				img(src= img, alt="")
+			.card__text
+				h3.card__title= title
+				p.card__subtitle= subtitle
+		.card__description
+			p= description

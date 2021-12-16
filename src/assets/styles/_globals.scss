@@ -1,0 +1,78 @@
+// Font
+.font {
+	&-title {
+	font-family: $font-main;
+	font-size: 2.25rem;
+	}
+	&-bigTitle {
+		font-family: $font-main;
+		font-size: 5rem;
+	}
+	&-midTitle {
+		font-family: $font-main;
+		font-size: 3rem;
+	}
+}
+
+// Colors
+.color {
+	&-main {
+		color: $color-main;
+	}
+	&-secondary {
+		color: $color-secondary;
+	}
+}
+
+// Backgrounds
+.bg {
+	&-main {
+		background-color: $color-main;
+	}
+	&-secondary {
+		background-color: $color-secondary;
+	}
+}
+
+// Flex
+.flex {
+	display: flex;
+	&-d {
+		&-c {
+			flex-direction: column;
+		}
+	}
+	&-j-c {
+		&-c {
+			justify-content: center;
+		}
+		&-sb {
+			justify-content: space-between;
+		}
+	}
+	
+	&-a-i-c {
+		align-items: center;
+	}
+	&-a-i-s {
+		align-items: start;
+	}
+	
+}
+
+// Wrappers
+.wrapper {
+	&-main {
+		width: 90%;
+	}
+	&-features {
+		width: 90%;
+	}
+}
+
+// Paddings 
+.p {
+	&-b-30 {
+		padding-bottom: 30px;
+	}
+}
