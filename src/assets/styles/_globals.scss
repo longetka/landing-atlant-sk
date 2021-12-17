@@ -12,6 +12,25 @@
 		font-family: $font-main;
 		font-size: 3rem;
 	}
+	&-lowTitle {
+		font-family: $font-main;
+		font-size: 1.875rem;
+	}
+	&-bigText {
+		font-family: $font-main;
+		font-size: 1.625rem;
+	}
+	&-midText {
+		font-family: $font-main;
+		font-size: 2.25rem;
+	}
+	&-lowText {
+		font-family: $font-main;
+		font-size: 1.1875rem;
+	}
+	&-bigLh {
+		line-height: 209.5%;
+	}
 }
 
 // Colors
@@ -31,6 +50,9 @@
 	}
 	&-secondary {
 		background-color: $color-secondary;
+	}
+	&-features {
+		background-color: $color-other;
 	}
 }
 
@@ -57,7 +79,9 @@
 	&-a-i-s {
 		align-items: start;
 	}
-	
+	&-a-i-str {
+		align-items: stretch;
+	}
 }
 
 // Wrappers
@@ -68,6 +92,9 @@
 	&-features {
 		width: 90%;
 	}
+	&-card {
+		padding: 20px;
+	}
 }
 
 // Paddings 
@@ -75,4 +102,27 @@
 	&-b-30 {
 		padding-bottom: 30px;
 	}
+	&-b-85 {
+		padding-bottom: 85px;
+	}
+	&-y-150 {
+		padding: 150px 0px;
+
+	}
+}
+
+// Borders
+.border {
+	&-left {
+		border-left: 9.5px solid $color-main;
+	}
+	&-top {
+		border-top: 9.5px solid $color-main;
+	}
+	&-right {
+		border-right: 9.5px solid $color-main;
+	}
+}
+.shadow {
+	box-shadow: 0px 30px 89px -10px rgba(0, 0, 0, .25);
 }
