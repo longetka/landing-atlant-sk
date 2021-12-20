@@ -4,17 +4,24 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-	mode: "production",
-	entry: './src/index.js',
+	mode: "development",
+	performance: {
+		hints: false,
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000
+	},
+	entry: {
+		index: './src/index.js'
+	},
 	output: {
-		filename: 'main.js',
+		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
 	},
 	
 	module: {
 		rules: [
 			{
-				test: /\.s[ac]ss$/i,
+				test: /\.scss$/i,
 				use: [
 					MiniCssExtractPlugin.loader,
 					"css-loader",
@@ -26,11 +33,15 @@ module.exports = {
 				loader: "pug-loader",
 			},
 			{
-				test: /\.(png|svg|jpg|jpeg|gif)/i,
-				loader: 'file-loader',
-				options: {
-					outputPath: 'assets/images'
-				},
+				test: /\.(png|jpg|jpeg|gif)/i,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: 'assets/images/[name].[ext]'
+						}
+					}
+				]
 			},
 		],
 	},
@@ -48,10 +59,7 @@ module.exports = {
 		})
 	],
 	devServer: {
-		static: {
-			directory: path.join(__dirname, 'src'),
-		},
-		compress: true,
-		port: 3000,
+		hot: true,
+		static: false,
 	},
 };

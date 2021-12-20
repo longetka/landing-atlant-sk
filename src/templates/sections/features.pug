@@ -1,21 +1,21 @@
 section.features.flex.flex-j-c-c.p-y-150.bg-features
 	.wrapper-features.flex.flex-j-c-sb
-		include ../components/card.pug
-		+card(
+		include ../mixins/cardFeatures.pug
+		+cardFeatures(
 			'../../../assets/images/price.png',
 			'Выгодные цены',
 			'Самые выгодные цены во всем сегменте',
 			'Наша компания всегда старается предоставлять самые низкие цены на рынке.',
 			'border-left border-top'	
 		)
-		+card(
+		+cardFeatures(
 			'../../../assets/images/warranty.png',
 			'Гарантия качества',
 			'Товары с гарантией от производителя',
 			'На все оборудование действует гарантия 5 лет.',
 			'border-top'
 		)
-		+card(
+		+cardFeatures(
 			'../../../assets/images/period.png',
 			'Всегда в срок',
 			'Работаем всегда оперативно',
