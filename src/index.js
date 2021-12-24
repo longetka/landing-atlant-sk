@@ -1,12 +1,15 @@
-import './assets/styles/index.scss';
-import bgHeader from './assets/images/bg-header-img.jpg';
-import logo from './assets/images/example-logo.png';
-import imgOffer from './assets/images/img-offer.png';
-import periodIcon from './assets/images/period.png';
-import priceIcon from './assets/images/price.png';
-import warrantyIcon from './assets/images/warranty.png';
+import './styles/index.scss';
+import load from 'ymaps-loader';
 
-import atlantSt from './assets/images/atlant-st.png';
-import atlantBs from './assets/images/atlant-bs.png';
-import atlantNg from './assets/images/atlant-ng.png';
-import atlantSf from './assets/images/atlant-sf.png';
+const apiKey = "a0c85176-3d3f-4f78-a099-5ae09fb86fcd";
+
+load({ apiKey }).then(() => {
+	ymaps.ready(init);
+
+	function init () {
+		let myMap = new ymaps.Map('map', {
+			center: [55.76, 37.64],
+			zoom: 10
+		});
+	};
+});

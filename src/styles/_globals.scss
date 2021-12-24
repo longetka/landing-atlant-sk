@@ -71,6 +71,9 @@
 		&-sb {
 			justify-content: space-between;
 		}
+		&-sa {
+			justify-content: space-around;
+		}
 	}
 	
 	&-a-i-c {
@@ -82,18 +85,32 @@
 	&-a-i-str {
 		align-items: stretch;
 	}
+	&-w-w {
+		flex-wrap: wrap;
+	}
 }
 
 // Wrappers
 .wrapper {
 	&-main {
 		width: 90%;
+		position: relative;
 	}
 	&-features {
 		width: 90%;
 	}
 	&-card {
 		padding: 20px;
+	}
+	&-goods {
+		width: 90%;
+	}
+	&-goodsCard {
+		padding: 45px;
+		background: url('../images/inner-Squircle.png');
+		background-position: center;
+		height: 99%;
+		width: 99%;
 	}
 }
 

@@ -1,24 +1,36 @@
+- var price = '../../images/price.png'
+- var warranty = ''
+- var period = 
+
 section.features.flex.flex-j-c-c.p-y-150.bg-features
 	.wrapper-features.flex.flex-j-c-sb
-		include ../mixins/cardFeatures.pug
-		+cardFeatures(
-			'../../../assets/images/price.png',
-			'Выгодные цены',
-			'Самые выгодные цены во всем сегменте',
-			'Наша компания всегда старается предоставлять самые низкие цены на рынке.',
-			'border-left border-top'	
-		)
-		+cardFeatures(
-			'../../../assets/images/warranty.png',
-			'Гарантия качества',
-			'Товары с гарантией от производителя',
-			'На все оборудование действует гарантия 5 лет.',
-			'border-top'
-		)
-		+cardFeatures(
-			'../../../assets/images/period.png',
-			'Всегда в срок',
-			'Работаем всегда оперативно',
-			'Мы всегда доставим ваш заказ в назначеную дату.',
-			'border-top border-right'
-		)
+		div(class="card shadow border-left border-top")
+			.wrapper-card
+				.card__header.flex.p-b-85
+					.card__img
+						img(src= require('../../images/price.png') alt="Price")
+					.card__text.flex.flex-d-c.flex-j-c-sb
+						h3.card__title.font-lowTitle Выгодные цены
+						p.card__subtitle.font-lowText Самые выгодные цены во всем сегменте
+				.card__description
+					p.font-bigText.font-bigLh Наша компания всегда старается предоставлять самые низкие цены на рынке.
+		div(class="card shadow border-top")
+			.wrapper-card
+				.card__header.flex.p-b-85
+					.card__img
+						img(src=require('../../images/warranty.png') alt="Warranty")
+					.card__text.flex.flex-d-c.flex-j-c-sb
+						h3.card__title.font-lowTitle Гарантия качества
+						p.card__subtitle.font-lowText Товары с гарантией от производителя
+				.card__description
+					p.font-bigText.font-bigLh На все оборудование действует гарантия 5 лет.
+		div(class="card shadow border-top border-right")
+			.wrapper-card
+				.card__header.flex.p-b-85
+					.card__img
+						img(src=require('../../images/period.png') alt="Period")
+					.card__text.flex.flex-d-c.flex-j-c-sb
+						h3.card__title.font-lowTitle Всегда в срок
+						p.card__subtitle.font-lowText Работаем всегда оперативно
+				.card__description
+					p.font-bigText.font-bigLh Мы всегда доставим ваш заказ в назначеную дату.

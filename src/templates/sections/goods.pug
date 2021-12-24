@@ -1,27 +1,48 @@
-section.goods
-	h3.goods__title.font-bigTitle НАШИ ТОВАРЫ
-	include ../mixins/cardGoods.pug
-	+cardGoods(
-		'../../../assets/images/atlant-st.png',
-		'Шнековый обезжириватель',
-		'"АТЛАНТ-СТ"',
-		'ОТ 400 000 РУБЛЕЙ'
-	)
-	+cardGoods(
-		'../../../assets/images/atlant-bs.png',
-		'Барабанное сито',
-		'"АТЛАНТ-СБ"',
-		'ОТ 300 000 РУБЛЕЙ'
-	)
-	+cardGoods(
-		'../../../assets/images/atlant-sf.png',
-		'Флотатор',
-		'"АТЛАНТ-СФ"',
-		'ОТ 400 000 РУБЛЕЙ'
-	)
-	+cardGoods(
-		'../../../assets/images/atlant-ng.png',
-		'Шнековая решетка',
-		'"АТЛАНТ-НЖ"',
-		'ОТ 800 000 РУБЛЕЙ'
-	)
+section.goods.flex.flex-j-c-c
+	.wrapper-goods
+		h3.goods__title.font-bigTitle НАШИ ТОВАРЫ
+		.wrapper-goods-cards.flex.flex-j-c-sb.flex-w-w
+			div.cardGoods.flex.flex-j-c-c.flex-a-i-c
+				.wrapper-goodsCard.flex.flex-d-c.flex-j-c-sa.flex-a-i-c
+					.cardGoods__img.flex.flex-j-c-c.flex-a-i-c
+						img(src=require('../../images/atlant-st.png'), alt="")
+					.cardGoods__title
+						h3.font-midTitle.color-secondary Шнековый обезжириватель
+						h3.font-midTitle.color-secondary Модель: "АТЛАНТ-СТ"
+					.cardGoods__price
+						p.font-midTitle.color-secondary ОТ 400 000 РУБЛЕЙ
+					.cardGoods__button
+						button.buttonOffer.bg-secondary.font-midTitle.color-main Заказать
+			div.cardGoods.flex.flex-j-c-c.flex-a-i-c
+				.wrapper-goodsCard.flex.flex-d-c.flex-j-c-sa.flex-a-i-c
+					.cardGoods__img.flex.flex-j-c-c.flex-a-i-c
+						img(src=require('../../images/atlant-bs.png'), alt="")
+					.cardGoods__title
+						h3.font-midTitle.color-secondary Барабанное сито
+						h3.font-midTitle.color-secondary Модель: "АТЛАНТ-СБ"
+					.cardGoods__price
+						p.font-midTitle.color-secondary ОТ 300 000 РУБЛЕЙ
+					.cardGoods__button
+						button.buttonOffer.bg-secondary.font-midTitle.color-main Заказать
+			div.cardGoods.flex.flex-j-c-c.flex-a-i-c
+				.wrapper-goodsCard.flex.flex-d-c.flex-j-c-sa.flex-a-i-c
+					.cardGoods__img.flex.flex-j-c-c.flex-a-i-c
+						img(src=require('../../images/img-offer.png'), alt="")
+					.cardGoods__title
+						h3.font-midTitle.color-secondary Флотатор
+						h3.font-midTitle.color-secondary Модель: "АТЛАНТ-СФ"
+					.cardGoods__price
+						p.font-midTitle.color-secondary ОТ 400 000 РУБЛЕЙ
+					.cardGoods__button
+						button.buttonOffer.bg-secondary.font-midTitle.color-main Заказать
+			div.cardGoods.flex.flex-j-c-c.flex-a-i-c
+				.wrapper-goodsCard.flex.flex-d-c.flex-j-c-sa.flex-a-i-c
+					.cardGoods__img.flex.flex-j-c-c.flex-a-i-c
+						img(src=require('../../images/atlant-ng.png'), alt="")
+					.cardGoods__title
+						h3.font-midTitle.color-secondary Шнековая решетка
+						h3.font-midTitle.color-secondary Модель: "АТЛАНТ-НЖ"
+					.cardGoods__price
+						p.font-midTitle.color-secondary ОТ 800 000 РУБЛЕЙ
+					.cardGoods__button
+						button.buttonOffer.bg-secondary.font-midTitle.color-main Заказать

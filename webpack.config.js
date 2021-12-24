@@ -1,65 +1,73 @@
+let mode = 'development';
+if (process.env.NODE_ENV === 'production') {
+	mode = 'production'
+};
+console.log(mode + ' mode');
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-	mode: "development",
-	performance: {
-		hints: false,
-		maxEntrypointSize: 512000,
-		maxAssetSize: 512000
-	},
+	mode: mode,
 	entry: {
 		index: './src/index.js'
 	},
 	output: {
-		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].[contenthash].js',
+		assetModuleFilename: "assets/[hash][ext][query]",
+		clean: true
 	},
-	
+	devtool: 'source-map',
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+		}
+	},
+	plugins: [
+		// new CopyPlugin({
+		// 	patterns: [
+		// 		{
+		// 			from: path.join(__dirname, 'src/images'),
+		// 			to: path.join(__dirname, 'dist/images')
+		// 		}
+		// 	]
+		// }),
+		new MiniCssExtractPlugin({ 
+			filename: "[name].[contenthash].css",
+			chunkFilename: "[id].[contenthash].css"
+		}),
+		new HtmlWebpackPlugin({
+			title: 'Компания "АТЛАНТ-СК"',
+			template: './src/templates/index.pug'
+		})
+	],
 	module: {
 		rules: [
 			{
-				test: /\.scss$/i,
+				test: /\.html$/i,
+				loader: "html-loader"
+			},
+			{
+				test: /\.(sa|sc|c)ss$/i,
 				use: [
-					MiniCssExtractPlugin.loader,
+					(mode === 'development') ? "style-loader" : MiniCssExtractPlugin.loader,
 					"css-loader",
+					"postcss-loader",
 					"sass-loader"
 				],
 			},
 			{
-				test: /\.pug$/i,
-				loader: "pug-loader",
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: 'asset/resource'
 			},
 			{
-				test: /\.(png|jpg|jpeg|gif)/i,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: 'assets/images/[name].[ext]'
-						}
-					}
-				]
+				test: /\.pug$/i,
+				loader: "pug-loader",
+				exclude: /(node_modules|bower_components)/,
 			},
+			
 		],
-	},
-
-	plugins: [
-		new CleanWebpackPlugin(),
-		new MiniCssExtractPlugin({ 
-			filename: "[name].css",
-			chunkFilename: "[id].css"
-		}),
-		new HtmlWebpackPlugin({
-			title: 'Компания "АТЛАНТ-СК"',
-			filename: 'index.html',
-			template: './src/templates/index.pug'
-		})
-	],
-	devServer: {
-		hot: true,
-		static: false,
 	},
 };
