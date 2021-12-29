@@ -1,0 +1,12 @@
+.modalForm#modal
+	.modalForm__container
+		h3.modalForm__title Заказать звонок
+		p.modalForm__subtitle Введите данные заказа звонка 
+		form.modalForm(method="POST")
+			label(for="name") Имя
+				input(type="text" name="name" id="name")
+			label(for="phone") Телефон
+				input(type="text" name="phone" id="phone")
+			label(for="agreement") Согласие на обработку персональных данных
+				input(type="checkbox" name="agreement" id="agreement")
+			button.buttonOffer.bg-main.font-midTitle.color-secondary ОТПРАВИТЬ ЗАЯВКУ
