@@ -14,21 +14,28 @@ load({ apiKey }).then(() => {
 		var geoObjects = new ymaps.GeoObject({
 			geometry: {
 				type: 'Point',
-				coordinates: [57.6, 39.8]
+				coordinates: [57.599272, 39.806551]
 			}
 		});
 		myMap.geoObjects.add(geoObjects);
 	};
 });
 
-const buttons = document.querySelectorAll('buttonOffer');
+const buttons = document.querySelectorAll('#button');
 const modal = document.getElementById('modal');
+const modalForm = document.getElementsByClassName('modalForm__container');
 
 buttons.forEach( button => {
 	button.addEventListener('click', modalHandler);
 });
 
 function modalHandler() {
-	// modal.classList.add('visible');
-	console.log('click')
-}
+	modal.style.display = "block";
+	console.log(modal);
+};
+
+window.onclick = function (event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	};
+};

@@ -1,12 +1,13 @@
 .modalForm#modal
-	.modalForm__container
-		h3.modalForm__title Заказать звонок
-		p.modalForm__subtitle Введите данные заказа звонка 
-		form.modalForm(method="POST")
-			label(for="name") Имя
-				input(type="text" name="name" id="name")
-			label(for="phone") Телефон
-				input(type="text" name="phone" id="phone")
-			label(for="agreement") Согласие на обработку персональных данных
-				input(type="checkbox" name="agreement" id="agreement")
-			button.buttonOffer.bg-main.font-midTitle.color-secondary ОТПРАВИТЬ ЗАЯВКУ
+	.modalForm__container.bg-main.flex.flex-j-c-c.flex-a-i-c.flex-d-c
+		h3.modalForm__title.font-halfBigTitle.color-secondary Заказать звонок
+		p.modalForm__subtitle.font-midText.color-secondary Введите данные заказа звонка 
+		form.modalForm__form.flex.flex-j-c-c.flex-a-i-c.flex-d-c(method="POST")
+			label.font-midText.color-secondary.flex-a-s-s(for="name") Имя
+			input.flex-a-s-s.font-midText(type="text" name="name" id="name" required)
+			label.font-midText.color-secondary.flex-a-s-s(for="phone") Телефон
+			input.flex-a-s-s.font-midText(type="text" name="phone" id="phone" required)
+			.modalForm__agreement.flex.flex-a-i-c
+				input(type="checkbox" name="agreement" id="agreement" required)
+				label.font-lowerText.color-secondary(for="agreement") Согласие на обработку персональных данных
+			button.modalForm__button.buttonOffer.bg-secondary.font-midText.color-main(type="submit") ОТПРАВИТЬ ЗАЯВКУ

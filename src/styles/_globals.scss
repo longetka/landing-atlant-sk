@@ -8,6 +8,10 @@
 		font-family: $font-main;
 		font-size: 5rem;
 	}
+	&-halfBigTitle {
+		font-family: $font-main;
+		font-size: 4rem;
+	}
 	&-midTitle {
 		font-family: $font-main;
 		font-size: 3rem;
@@ -27,6 +31,10 @@
 	&-lowText {
 		font-family: $font-main;
 		font-size: 1.1875rem;
+	}
+	&-lowerText {
+		font-family: $font-main;
+		font-size: 1.125rem;
 	}
 	&-bigLh {
 		line-height: 209.5%;
@@ -88,6 +96,9 @@
 	&-w-w {
 		flex-wrap: wrap;
 	}
+	&-a-s-s {
+		align-self: flex-start;
+	}
 }
 
 // Wrappers
@@ -143,6 +154,11 @@
 .shadow {
 	box-shadow: 0px 30px 89px -10px rgba(0, 0, 0, .25);
 }
+
+// Other
 button {
 	cursor: pointer;
+}
+.card-order {
+	order: 2;
 }
