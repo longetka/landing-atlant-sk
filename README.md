@@ -1,6 +1,7 @@
 # Atlant-SK Landing
 
 This web-page building with Webpack. Using with pug, scss and javascript.
+
 Designed to send lead requests to the customer.
 
 ***
