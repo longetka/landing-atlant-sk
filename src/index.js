@@ -23,7 +23,6 @@ load({ apiKey }).then(() => {
 
 const buttons = document.querySelectorAll('#button');
 const modal = document.getElementById('modal');
-const modalForm = document.getElementsByClassName('modalForm__container');
 
 buttons.forEach( button => {
 	button.addEventListener('click', modalHandler);

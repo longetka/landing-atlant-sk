@@ -2,7 +2,7 @@
 	.modalForm__container.bg-main.flex.flex-j-c-c.flex-a-i-c.flex-d-c
 		h3.modalForm__title.font-halfBigTitle.color-secondary Заказать звонок
 		p.modalForm__subtitle.font-midText.color-secondary Введите данные заказа звонка 
-		form.modalForm__form.flex.flex-j-c-c.flex-a-i-c.flex-d-c(method="POST")
+		form.modalForm__form.flex.flex-j-c-c.flex-a-i-c.flex-d-c(method="POST" action="http://localhost:8080/")
 			label.font-midText.color-secondary.flex-a-s-s(for="name") Имя
 			input.flex-a-s-s.font-midText(type="text" name="name" id="name" required)
 			label.font-midText.color-secondary.flex-a-s-s(for="phone") Телефон

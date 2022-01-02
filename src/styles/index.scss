@@ -17,11 +17,15 @@
 	html {
 		font-size: 6px;
 	}
+	.header {
+		height: auto;
+	}
 	.topbar {
 		flex-direction: column;
 	}
 	.offer {
 		flex-direction: column-reverse;
+		margin-bottom: 50px;
 		&__text {
 			border-left: none;
 			width: 100%;
@@ -33,6 +37,14 @@
 				width: 80%;
 			}
 		}
+	}
+	.logotype {
+		&__img {
+			width: 15%;
+		}
+	}
+	.contacts {
+		margin-left: 15%;
 	}
 	.wrapper {
 		&-features {
