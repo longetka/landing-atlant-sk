@@ -40,7 +40,11 @@
 	}
 	.logotype {
 		&__img {
-			width: 15%;
+			width: 60px;
+			height: 60px;
+			& img {
+				width: 35px;
+			}
 		}
 	}
 	.contacts {

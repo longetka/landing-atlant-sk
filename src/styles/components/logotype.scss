@@ -1,5 +1,12 @@
 .logotype {
 	&__img {
-		padding-right: .9375rem;
+		margin-right: .9375rem;
+		width: 103px;
+		height: 103px;
+		border-radius: 50%;
+		background-color: #FFFFFF;
+		& img {
+			width: 60px;
+		}
 	}
 }
