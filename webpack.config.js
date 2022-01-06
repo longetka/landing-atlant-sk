@@ -6,8 +6,8 @@ console.log(mode + ' mode');
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: mode,
@@ -26,14 +26,7 @@ module.exports = {
 		}
 	},
 	plugins: [
-		// new CopyPlugin({
-		// 	patterns: [
-		// 		{
-		// 			from: path.join(__dirname, 'src/images'),
-		// 			to: path.join(__dirname, 'dist/images')
-		// 		}
-		// 	]
-		// }),
+		new FaviconsWebpackPlugin('./src/images/logotype.png'),
 		new MiniCssExtractPlugin({ 
 			filename: "[name].[contenthash].css",
 			chunkFilename: "[id].[contenthash].css"

@@ -54,6 +54,10 @@
 		&-features {
 			flex-wrap: wrap;
 			justify-content: space-around;
+			width: 100%;
+		}
+		&__goods {
+			width: 95%;
 		}
 	}
 	.card {
