@@ -8,9 +8,9 @@
 	background-color: rgba(0, 0, 0, .4);
 	&__container {
 		margin: 0 auto;
-		transform: translate(0px, 7%);
+		transform: translate(0%, 7%);
 		width: 67.44%;
-		height: 928px;
+		height: 800px;
 		border-radius: 20px;
 		box-shadow: inset 0px 0px 15px 5px $color-halfWhite;
 	}
@@ -45,6 +45,6 @@
 		}
 	}
 	&__button {
-		margin-top: 90px;
+		margin-top: 20px;
 	}
 }

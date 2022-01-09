@@ -141,3 +141,41 @@
 		padding: 20px 0;
 	}
 }
+
+@media screen and (max-width: 1366px) {
+	html {
+		font-size: 14px;
+	}
+	.offer {
+		&__img {
+			& img {
+				width: 90%;
+			}
+		}
+	}
+	.wrapper {
+		&-features {
+			width: 95%;
+		}
+		&-goods {
+			&-cards {
+				justify-content: center;
+			}
+		}
+	}
+	.card {
+		width: 29rem;
+	}
+	.modalForm {
+		&__container {
+			transform: translate(0%, 0%);
+			height: 770px;
+		}
+		&__title {
+			margin-bottom: 10px;
+		}		
+		&__subtitle {
+			margin-bottom: 20px;
+		}
+	}
+}
