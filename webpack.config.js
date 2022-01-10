@@ -2,7 +2,7 @@ let mode = 'development';
 if (process.env.NODE_ENV === 'production') {
 	mode = 'production'
 };
-console.log(mode + ' mode');
+console.log(process.env.NODE_ENV);
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
